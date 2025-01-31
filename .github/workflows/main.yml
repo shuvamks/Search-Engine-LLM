@@ -1,4 +1,4 @@
-name: Sync to Hugging Face hub
+ --forcename: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://shuvamks:$HF_TOKEN@huggingface.co/spaces/shuvamks/Search_Engine_llm main
+        run: git push --force https://shuvamks:$HF_TOKEN@huggingface.co/spaces/shuvamks/Search_Engine_llm main
